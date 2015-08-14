@@ -31,6 +31,7 @@ public class BouncyCastleProvider extends Provider {
 		super("BouncyCastleProvider", 1.0, "");
 
 		put("Cipher.TWOFISH", org.bouncycastle.jce.provider.JCEBlockCipher.Twofish.class.getName());
+		put("Cipher.TNEPRES", org.bouncycastle.jce.provider.JCEBlockCipher.Tnepres.class.getName());
 	}
 
 }

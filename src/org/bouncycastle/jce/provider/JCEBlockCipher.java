@@ -24,6 +24,7 @@ import org.bouncycastle.crypto.engines.SkipjackEngine;
 import org.bouncycastle.crypto.engines.TEAEngine;
 */
 import org.bouncycastle.crypto.engines.TwofishEngine;
+import org.bouncycastle.crypto.engines.TnepresEngine;
 //import org.bouncycastle.crypto.engines.XTEAEngine;
 //import org.bouncycastle.crypto.modes.AEADBlockCipher;
 import org.bouncycastle.crypto.modes.CBCBlockCipher;
@@ -1252,6 +1253,18 @@ public class JCEBlockCipher extends WrapCipherSpi
     }
     */
 
+    /**
+     * Tnepres (reverse Serpent)
+     */
+    static public class Tnepres
+    extends JCEBlockCipher
+    {
+        public Tnepres()
+        {
+            super(new TnepresEngine());
+        }
+    }
+    
     static private interface GenericBlockCipher
     {
         public void init(boolean forEncryption, CipherParameters params)
